@@ -7,6 +7,8 @@ export enum Category {
   FANTASY = 'Fantasy',
 }
 
+export type BookDocument = Book & Document;
+
 @Schema({
   timestamps: true,
 })
