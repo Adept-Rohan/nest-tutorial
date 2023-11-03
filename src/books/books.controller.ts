@@ -39,11 +39,11 @@ export class BookController {
 
   @Patch(':id')
   async updateBook(
-    @Body()
     @Param('id')
     id: string,
-    book: UpdateBookDto,
+    @Body() book: UpdateBookDto,
   ): Promise<Book> {
+    console.log(id, book);
     return this.bookService.updateById(id, book);
   }
 
